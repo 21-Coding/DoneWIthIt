@@ -5,7 +5,8 @@ import {
   Text,
   Image,
   SafeAreaView,
-  TouchableWithoutFeedback,
+  View,
+  TouchableNativeFeedback,
 } from "react-native";
 
 export default function App() {
@@ -13,16 +14,12 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Money Heist</Text>
-      <TouchableWithoutFeedback>
-        <Image
-          source={{
-            width: 200,
-            height: 300,
-            uri: "https://picsum.photos/200/300",
-          }}
-        ></Image>
-      </TouchableWithoutFeedback>
+      <Text>Hello Dom!</Text>
+      <TouchableNativeFeedback>
+        <View
+          style={{ width: 200, height: 70, backgroundColor: "dodgerblue" }}
+        ></View>
+      </TouchableNativeFeedback>
       <StatusBar style="inverted" />
     </SafeAreaView>
   );
@@ -31,7 +28,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "red",
     justifyContent: "center",
     alignItems: "center",
   },
